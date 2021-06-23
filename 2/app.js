@@ -41,6 +41,42 @@ if(savedUsername === null){
     paintGreetings(savedUsername);
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//clack.js
+
+const clock = document.querySelector("h2#clock");
+
+//DATE함수를 이용하고 시간 분 초를 추출한 후 2자리로 나타나도록 padstart를 줌
+function getClock() {
+    const date = new Date();
+    const hours = String(date.getHours()).padStart(2,"0");
+    const Minutes = String(date.getMinutes()).padStart(2,"0");
+    const Seconds = String(date.getSeconds()).padStart(2,"0");
+    clock.innerText = `${hours}:${Minutes}:${Seconds}`;
+}
+//바로 실행하기
+getClock().
+//setinterval setInterval(sayHello, 5000);
+//settimeouts setTimeout(sayHello, 5000);
+setInterval(getClock, 1000); //1초 간격으로 
+// string은 무조건 두자리로 만들기 --> 예쁘니까~
+
+
+
+////////////////////////////////////////////////////////////////////
+//quotes.js
+
+//긍정적인 생각, 유연한 사고
+//좀 제육이나 볶아온나
+//져놓고 좋은경기 했습니다??  지면 진거에요 그냥 *같은거에요
+//내가 누군가를 좋아한다는 사실이 그 사람에게 상처가 될 수도 있잖아요.
+//남 탓을 할 수도 있다. 우린 남이니까
+//불편해? 불편하면 자세를 고쳐앉아
+//제 2원칙:제 1원칙을 고수해라
+//제 1원칙: 절대 손해보지 마라
+//나 커서 엄마 랄로가 될래요
+//못생긴 ... 담배 ... 
+
 
 
 
