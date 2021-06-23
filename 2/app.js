@@ -199,7 +199,32 @@ if (savedToDos){
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//weather.js
+//경도와 위도 찾기
+const API_Key = 24143
+function onGeoOk(position){
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+    console.log(lat ,lon);
+    //클릭해서 열어보기
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_Key}&units=metric`;
+    fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+        const weather = document.querySelector('#weather span:first-child');
+        const city = document.querySelector('#weather span:last-child');
+        const name = data.name;
+        const weather =  data.weather[0].main;
+        weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+        city.innerText = data.name;
+    });
+}
+//좌표를 위피로 바꿔주는 서비스
 
+function onGeoError(){
+    alert("사용자의 위치를 찾을 수 없습니다.")
+}
+navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError)
 
 
 
