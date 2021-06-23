@@ -55,7 +55,7 @@ function getClock() {
     clock.innerText = `${hours}:${Minutes}:${Seconds}`;
 }
 //바로 실행하기
-getClock().
+getClock()
 //setinterval setInterval(sayHello, 5000);
 //settimeouts setTimeout(sayHello, 5000);
 setInterval(getClock, 1000); //1초 간격으로 
@@ -63,21 +63,76 @@ setInterval(getClock, 1000); //1초 간격으로
 
 
 
-////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //quotes.js
 
-//긍정적인 생각, 유연한 사고
-//좀 제육이나 볶아온나
-//져놓고 좋은경기 했습니다??  지면 진거에요 그냥 *같은거에요
-//내가 누군가를 좋아한다는 사실이 그 사람에게 상처가 될 수도 있잖아요.
-//남 탓을 할 수도 있다. 우린 남이니까
-//불편해? 불편하면 자세를 고쳐앉아
-//제 2원칙:제 1원칙을 고수해라
-//제 1원칙: 절대 손해보지 마라
-//나 커서 엄마 랄로가 될래요
-//못생긴 ... 담배 ... 
+const quotes = [
+    {
+        quote:"긍정적인 생각, 유연한 사고"
+        ,author: "Ralo"
+    },
+    {
+        quote:"좀 제육이나 볶아온나"
+        ,author: "Ralo"
+    },
+    {
+        quote:"져놓고 좋은경기 했습니다??  지면 진거에요 그냥 *같은거에요"
+        ,author: "Ralo"
+    },
+    {
+        quote:"내가 누군가를 좋아한다는 사실이 그 사람에게 상처가 될 수도 있잖아요."
+        ,author: "Ralo"
+    },
+    {
+        quote:"남 탓을 할 수도 있다. 우린 남이니까"
+        ,author: "Ralo"
+    },
+    {
+        quote:"불편해? 불편하면 자세를 고쳐앉아"
+        ,author: "Ralo"
+    },
+    {
+        quote:"제 2원칙:제 1원칙을 고수해라"
+        ,author: "Ralo"
+    },
+    {
+        quote:"제 1원칙: 절대 손해보지 마라"
+        ,author: "Ralo"
+    },
+    {
+        quote:"나 커서 엄마 랄로가 될래요"
+        ,author: "Ralo"
+    },
+    {
+        quote:"못생긴 ... 담배 ... "
+        ,author: "Ralo"
+    }
+]
+
+//MathModel
+const quote = document.querySelector('#quote > span:nth-child(1)')
+const author = document.querySelector('#quote > span:nth-child(2)')
+
+//길이만큼 랜덤으로 뽑고 내림해서 배열에서 선택 --> 랜덤 
+const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)]
+//각 span에 텍스트 넣기
+quote.innerText = todaysQuote.quote;
+author.innerText = todaysQuote.author;
 
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//background.js
+//이미지 고르기 랜덤으로
+const images =["1.jpg" , "2.jpg" , "3.jpg"];
+const chosenImage = images[Math.floor(Math.random() * images.length)];
+//html에 이미지 추가하기
+//img태그 만들기
+const bgImage = document.createElement("img");
+//src입력하기
+bgImage.src = `${chosenImage}`;
+//body에 추가하기
+document.body.appendChild(bgImage)
 
 
 
