@@ -1,0 +1,110 @@
+.hidden{
+    display: none;
+}
+#clock{
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    color: white;
+    margin-top: 40px;
+    position: absolute;
+    left: 550px;
+    top: 200px;
+    cursor: default;
+    font-size: 1050%;
+    letter-spacing: -5px;
+}
+#login-form{
+    position:absolute;
+    left: 650px;
+    top: 480px;
+
+}
+#login-form > input[type=text]:nth-child(1){
+    position:absolute;    
+    height: 30px;
+    left: 23px;
+    color: black;
+    border-radius:2em ;
+    
+}
+#todo-form > input{
+    position: absolute;
+    left: 500px;
+    top: 540px;
+    border-bottom-width: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 1;
+    border-bottom: 5px solid white ;
+    width: 500px;
+    height: 40px;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+}
+#login-form > input[type=submit]:nth-child(2){
+    display: none;
+}
+#greeting{
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    position: relative;
+    left: 560px;
+    top: 380px;
+    color: white;
+    font-size: 50px;
+}
+#todo-list{
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    position: absolute;
+    left: 580px;
+    top: 580px;
+    border: 0px;
+    color: white;
+    opacity: 1.0;
+    font-size: 20px;
+}
+#quote > span:nth-child(1){
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    position: absolute;
+    left: 80px;
+    top: 699px;
+    color: whitesmoke;
+}
+#quote > span:nth-child(2){
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    position: absolute;
+    left: 30px;
+    top: 701.9px;
+    color: whitesmoke;
+}
+#wFT > p{
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    position: relative;
+    left: 400px;
+    top: 350px;
+    color: white;
+    font-size: 50px;
+}
+#weather > span:nth-child(1){
+    color: teal;
+    position: absolute;
+    left: 1300px;
+    top: 0px;
+    font-size: 30px;
+}
+#weather > span:nth-child(2){
+    color: teal;
+    position: absolute;
+    left: 1300px;
+    top: 30px;
+    font-size: 30px;
+}
+.img{
+    position: absolute;
+}
+.body{
+    
+    width: 1830px;
+    height: 916px;
+    background-image: "1.jpg";
+    position: relative;
+}
